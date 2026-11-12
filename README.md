@@ -1,42 +1,46 @@
-# 心力日记 · Heartball Diary
+[简体中文](README.zh-CN.md) · [English](README.md) · [日本語](README.ja.md)
 
-把心力球里的全时记和随口记，整理成可以回看的每一天。
+# Heartball Diary · 心力日记
 
-在自己的电脑上浏览每日回顾、时间轴和原话，按主题追踪进展，收藏值得留下的片段，导出排版完整的 PDF 日报。支持多个本地资料库，每份资料库分别连接自己的心力球账号。
+Turn Heartball recordings and quick voice notes into days you can revisit.
 
-[English](README.en.md) · [小白上手](docs/QUICKSTART.md) · [各 Agent 一句话配置](docs/AGENT_GUIDE.md) · [连接心力球](docs/MCP.md) · [常见问题](docs/TROUBLESHOOTING.md)
+Browse daily reviews, timelines, and source transcripts on your own computer. Follow progress by topic, bookmark meaningful passages, and export formatted PDF daily reports. Separate local profiles can each connect to their own Heartball account.
 
-## 选一条适合你的开始方式
+[Quick start](docs/QUICKSTART.md) · [Agent-specific setup prompts](docs/AGENT_GUIDE.md) · [Connect Heartball](docs/MCP.md) · [Troubleshooting](docs/TROUBLESHOOTING.md)
 
-| 你的情况 | 从这里开始 |
+The application currently uses Chinese UI labels, and the detailed guides and project skills are primarily in Chinese. The instructions below keep the actual button names so you can find them; you can ask your agent to explain each step in your preferred language.
+
+## Choose how to start
+
+| Your situation | Start here |
 | --- | --- |
-| 我有 TRAE、Qoder、Codex、Claude Code 或 Cursor，想让它帮我配置 | 复制下面的“一句话”，或使用[对应 Agent 的专用版本](docs/AGENT_GUIDE.md) |
-| 我不熟悉代码，想自己跟着做 | [下载 ZIP → 安装 Node.js → 启动 → 授权](docs/QUICKSTART.md) |
-| 我只想先看看长什么样 | 下载并解压项目，打开 `public/index.html`，查看明确标记的虚构示例 |
-| 我已经装好，只想更新日记 | 在打开这个本地项目的 Agent 中说“更新心力球，整理新增内容并更新我的日记” |
+| You use TRAE, Qoder, Codex, Claude Code, or Cursor and want help with setup | Copy the prompt below, or use the [agent-specific version](docs/AGENT_GUIDE.md). |
+| You prefer to follow the steps yourself | [Download ZIP → install Node.js → start → authorize](docs/QUICKSTART.md). |
+| You only want to see what it looks like | Download and extract the project, then open `public/index.html` to explore clearly labeled fictional examples offline. |
+| You already have it installed and want to update your diary | Start the local service, open the project in your local agent, and use the update prompt below. |
 
-## 复制这一句话，让 Agent 帮你配置
+## Let your local agent set it up
 
-把下面整段发给**能够操作本机文件和终端的本地 Agent**：
+Use a local Codex, Claude Code, Cursor, TRAE, Qoder, or another agent session with access to your computer's files and terminal. Paste:
 
 ```text
-请在我的电脑上安装并启动 https://github.com/HBaopiqi/heartball-diary，先读仓库 AGENTS.md 和 AGENT-SETUP.md，按实际使用的 Agent 配好项目技能，完成环境检查、依赖安装和本地页面验证，再引导我本人完成心力球账号授权及首次同步整理，最后告诉我访问地址、数据位置和以后一句话更新的方法。
+Set up https://github.com/HBaopiqi/heartball-diary on my computer: read AGENTS.md and AGENT-SETUP.md, install the project skills for this agent, check Node and dependencies, start and verify the local website, then guide me through signing in to my own Heartball account and authorizing access; after authorization, sync and curate the first diary using heartball-sync, preserve existing data, and give me the local URL, data location, and a one-line prompt for future updates.
 ```
 
-Agent 会完成它有权限执行的步骤。安装软件时的系统确认、心力球账号登录和授权仍由你本人完成。普通聊天网页可以帮你整理文件；要直接安装到这台电脑，需要本地文件与终端能力。[选择正确入口、各工具专用指令和英文指令 →](docs/AGENT_GUIDE.md)
+The agent can complete only the steps its permissions allow. You complete account sign-in, authorization, and system permission prompts yourself. A cloud-only or chat-only session does not automatically have access to your computer: it may help curate uploaded files, but installing the project on this computer requires local file and terminal access. See the [agent guide](docs/AGENT_GUIDE.md) for suitable entry points and tool-specific prompts.
 
-## 自己启动，也只需要这几步
+## Start it yourself
 
-1. 安装 [Node.js 当前 LTS 版本](https://nodejs.org/en/download)，本项目要求 **22 或更新版本**。
-2. [下载项目 ZIP](https://github.com/HBaopiqi/heartball-diary/archive/refs/heads/main.zip)，完整解压。
-3. **Windows：双击 `start.cmd`。Mac / Linux：在解压目录的终端运行 `bash start.sh`。**
-4. 打开终端显示的地址，默认是 `http://127.0.0.1:3210`，保留启动窗口。
-5. 点击右上角“档案”，在“连接心力球”中完成授权，再点击“同步原始记录”。
+1. Install a current [Node.js LTS](https://nodejs.org/en/download) release, version **22 or newer**.
+2. [Download the repository ZIP](https://github.com/HBaopiqi/heartball-diary/archive/refs/heads/main.zip) and extract it completely. Git is not required for ZIP downloads.
+3. On Windows, double-click `start.cmd`. On macOS or Linux, run `bash start.sh` from the extracted project directory.
+4. Open the URL printed in the terminal, normally `http://127.0.0.1:3210`. Keep that terminal running.
+5. Click “档案” at the top right, complete authorization under “连接心力球,” then click “同步原始记录.”
 
-首次启动会安装项目依赖；以后已有可用依赖时直接启动。没有 Git 也可以使用 ZIP。逐步说明和每一步应该看到的结果见[小白上手](docs/QUICKSTART.md)。
+The first launch installs project dependencies; later launches start directly when usable dependencies are already present. The [quick-start guide](docs/QUICKSTART.md) explains each step and what to expect.
 
 <details>
-<summary>习惯命令行？展开查看</summary>
+<summary>Prefer the command line?</summary>
 
 ```sh
 git clone https://github.com/HBaopiqi/heartball-diary.git
@@ -45,56 +49,92 @@ npm run setup
 npm start
 ```
 
-环境排查：`npm run doctor`。Windows PowerShell 若提示 `npm.ps1` 无法运行，可使用 `npm.cmd run setup` 和 `npm.cmd start`。
+Run `npm run doctor` for environment and port checks. If Windows PowerShell blocks `npm.ps1`, use `npm.cmd run setup` and `npm.cmd start`.
 
 </details>
 
-## 连接、同步、整理，各自在做什么？
+Opening `public/index.html` directly is sufficient for the fictional demo. MCP connections require the local server.
+
+## Connect your own Heartball account
+
+The website currently has these Chinese labels:
+
+| Button or label | Meaning |
+| --- | --- |
+| 档案 | Profiles, at the top right |
+| 连接心力球 | Heartball connection settings |
+| MCP 服务地址 | MCP service endpoint |
+| 保存设置 | Save settings |
+| 连接 / 授权 | Connect / authorize |
+| 打开心力球授权页面 | Open the account authorization page |
+| 同步原始记录 | Sync original records |
+| 载入最新记录 | Load the latest records |
+| 下载原文整理包 | Download a review packet |
+| 导入已整理的资料 | Import a curated dataset |
+| 导出日报 | Export a PDF daily report |
+
+The server creates an empty default profile. In its connection settings, confirm the prefilled endpoint or replace it with the address provided for your account. Complete the browser sign-in and authorization yourself, then sync. See the [connection guide](docs/MCP.md) for the currently configured endpoint and its limitations. Account support and network availability depend on the service provider and your region.
+
+The local website is the MCP client. Your agent can use its local API to obtain a review packet; configuring the same MCP separately in every agent is usually unnecessary.
+
+## Connection, sync, and curation are different steps
 
 ```mermaid
 flowchart LR
-    A[你的心力球账号] -->|本人授权 MCP| B[电脑上的心力日记]
-    B -->|同步全时记与随口记| C[完整原始记录]
-    C -->|Agent 按 Skill 阅读原话| D[每日回顾与进展]
-    D -->|导入对应资料库| B
-    B --> E[浏览日记 / 下载 PDF]
+    A[Your Heartball account] -->|You authorize MCP access| B[Heartball Diary on your computer]
+    B -->|Sync recordings and voice notes| C[Full original transcripts]
+    C -->|Agent reads transcripts using the skill| D[Daily reviews and progress]
+    D -->|Import into the matching profile| B
+    B --> E[Browse diaries / export PDF]
 ```
 
-- **连接**：允许本地服务读取你自己账号的记录。[MCP 接入步骤 →](docs/MCP.md)
-- **同步**：取回原文并保存。首次默认查询最近 7 个自然日，之后增量合并并回查可能晚到的记录。
-- **整理**：由你使用的 Agent 按完整原话生成回顾，再导入网站。网站自身不调用模型 API；只有同步原文时，会明确显示“待整理”。
+- **Connection** authorizes the local service to read records from your own account.
+- **Sync** retrieves and saves the original records. The first sync covers the most recent seven calendar days in Beijing time by default. Later syncs merge by source ID and recheck overlapping dates for records that may arrive late.
+- **Curation** is a separate step performed by your chosen agent, using the `heartball-sync` skill to read the complete transcripts and create reviews for import. The website itself does not call a model API or require a model API key. Records that have only been synced are explicitly marked “待整理” (awaiting curation).
 
-通常只需要让**本地网站连接一次 MCP**。Agent 通过本地服务取得整理包，不必先给每个 Agent 另装一套心力球 MCP 配置。
+For later updates, open this project in your local agent and say:
 
-## 日常怎么用
+```text
+Use heartball-sync to sync my Heartball records, read the full transcripts for affected dates, update daily reviews and progress, import them into the correct local profile, and verify the result.
+```
 
-| 想做的事 | 操作 |
+Codex and Cursor can use the existing `.agents/skills` directory. For Claude Code, TRAE, or Qoder, use `node scripts/install-agent-skills.mjs --agent claude`, `--agent trae`, or `--agent qoder` respectively. These commands install only the two project skills and preserve differing existing copies. See [tool-specific instructions and official references](docs/AGENT_GUIDE.md).
+
+An agent with only file-upload support can curate an exported review packet using the included [skill](.agents/skills/heartball-sync/SKILL.md) and [dataset schema](.agents/skills/heartball-sync/references/dataset-schema.md). Import its complete JSON into the same profile afterward. Only share transcripts with an assistant you intend to use for that data. See [creating your first daily review](docs/QUICKSTART.md#生成第一份每日回顾).
+
+## Everyday use
+
+| What you want to do | How |
 | --- | --- |
-| 更新记录和回顾 | 启动本地服务，在项目 Agent 中说“更新心力球，整理新增内容并更新日记” |
-| 回看一天 | “每日回顾”选日期；点击时间轴或来源按钮核对原话 |
-| 确认有没有更新到 | 查看“同步信息”中的查询截至、实际原文范围和整理状态 |
-| 留下重要片段 | 在记录详情中收藏；收藏按资料库保存 |
-| 分享一天的报告 | 选择日期 → “导出日报”，下载 PDF |
-| 备份或迁移 | “全部记录 → 导出资料”，保存 JSON；完整服务备份另见[上手指南](docs/QUICKSTART.md#备份与升级) |
+| Update records and reviews | Start the local service and use the update prompt in your project agent. |
+| Revisit a day | Choose a date in “每日回顾”; use timeline entries or source buttons to check the original words. |
+| Check whether the diary is up to date | Look at the query end time, actual transcript range, and curation status in “同步信息.” |
+| Keep an important passage | Bookmark it in the record details; bookmarks are separated by profile. |
+| Share a daily report | Choose a date, then click “导出日报” to download a PDF. |
+| Back up or migrate | Use “全部记录 → 导出资料” to save JSON. For a full service backup, see [backup and upgrades](docs/QUICKSTART.md#备份与升级). |
 
-没有本地 Agent 时，也可以下载“原文整理包”，将它与[整理 Skill](.agents/skills/heartball-sync/SKILL.md)和[资料格式](.agents/skills/heartball-sync/references/dataset-schema.md)一起交给能读取文件的助手，再导入返回的完整 JSON。[操作说明 →](docs/QUICKSTART.md#生成第一份每日回顾)
+## Your data, privacy, and backups
 
-## 数据和使用范围
+This is an independently maintained community project, not an official OPPO product. The repository contains only the program, documentation, and clearly labeled fictional examples. Real records live in `data/` by default, or in the directory selected by `HEARTBALL_DATA_DIR`; this runtime data is excluded from Git.
 
-这是个人维护的社区项目，与 OPPO 没有官方隶属关系。仓库只包含程序、说明和虚构示例；真实记录默认保存在电脑上的 `data/`，已被 Git 忽略。不同资料库是内容分类功能，请在自己的电脑使用。
+The server binds to loopback only. Profiles organize content and account connections; they are not a multi-user access-control system. Use the application on your own computer.
 
-MCP 同步会连接你配置的服务。使用 Agent 整理时，选中的原文会进入你使用的助手环境，费用和可用性取决于该工具或账号。网站不要求填写模型 API Key。
+MCP sync connects to the service you configure. When you use an agent for curation, the selected transcripts enter that assistant's environment. Costs and availability depend on the tool or account you choose. The website does not ask for a model API key.
 
-“查询截至”和“实际返回原文时段”分别显示；某段时间暂未返回，不代表没有活动。PDF 当前以高清页面保存中文，适合阅读和打印，正文不能直接选中文字。
+Stop the server before backing up its entire data directory. That backup includes local credentials and must remain private. Export a complete JSON dataset from each profile to migrate reviews and bookmarks; bookmarks are otherwise stored in the browser. See the [backup guide](docs/QUICKSTART.md#备份与升级).
 
-## 开发与反馈
+The query end time and the actual returned recording range are shown separately. Missing records for a period do not prove there was no activity. PDF reports use high-resolution rendered pages to preserve Chinese text for reading and printing; their body text is not selectable.
+
+Use `Ctrl+C` in the startup terminal to stop the service, and use the same startup script when you need it again. Back up before upgrading. For a Git checkout, use `git pull --ff-only`, then `npm ci`, and restart; preserve any local code changes.
+
+## Development and support
 
 ```sh
 npm test
 ```
 
-前端在 `public/`，本地服务在 `server/`，配置与整理技能在 `.agents/skills/`。`npm run demo` 只重建公开虚构示例。
+Frontend files are in `public/`, the local server in `server/`, and setup and curation skills in `.agents/skills/`. `npm run demo` only rebuilds the public fictional examples.
 
-遇到问题先看[常见问题](docs/TROUBLESHOOTING.md)；仍不能解决，可以[提交 Issue](https://github.com/HBaopiqi/heartball-diary/issues)，附系统、Node 版本、报错和复现步骤。请先移除日志中的私人原文、账号信息和凭据。
+Read the [troubleshooting guide](docs/TROUBLESHOOTING.md), or [open an issue](https://github.com/HBaopiqi/heartball-diary/issues) with your OS, Node version, error, and reproduction steps. Remove private transcripts, account information, and credentials from logs before sharing them.
 
-代码采用 [MIT License](LICENSE)。第三方依赖遵循各自许可证，OPPO、心力球等名称归各自权利人所有。
+Code is licensed under the [MIT License](LICENSE). Third-party dependencies retain their own licenses. OPPO, Heartball, and other product names belong to their respective owners.

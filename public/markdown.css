@@ -1,0 +1,45 @@
+.heartball-markdown {
+  color: var(--text, #29364b);
+  font-size: 16px;
+  line-height: 1.8;
+  overflow-wrap: anywhere;
+  min-width: 0;
+}
+.heartball-markdown p { margin: 0 0 1em; color: var(--text, #29364b); font-size: 16px; line-height: 1.8; white-space: pre-wrap; }
+.heartball-markdown h1, .heartball-markdown h2, .heartball-markdown h3,
+.heartball-markdown h4, .heartball-markdown h5, .heartball-markdown h6 {
+  color: var(--ink, #172b4d);
+  font-weight: 700;
+  line-height: 1.5;
+  margin: 1.45em 0 .65em;
+  letter-spacing: 0;
+}
+.heartball-markdown h1 { font-size: 24px; }
+.heartball-markdown h2 { font-size: 22px; }
+.heartball-markdown h3, .heartball-markdown h4, .heartball-markdown h5, .heartball-markdown h6 { font-size: 20px; }
+.heartball-markdown > :first-child { margin-top: 0; }
+.heartball-markdown > :last-child { margin-bottom: 0; }
+.heartball-markdown strong { font-weight: 700; color: var(--ink, #172b4d); }
+.heartball-markdown ul, .heartball-markdown ol { margin: .6em 0 1em; padding-left: 1.5em; color: var(--text, #29364b); font-size: 16px; }
+.heartball-markdown li { margin: .35em 0; padding-left: .15em; line-height: 1.8; }
+.heartball-markdown li > p { margin: .35em 0; }
+.heartball-markdown li > ul, .heartball-markdown li > ol { margin: .3em 0; }
+.heartball-markdown blockquote { margin: 1em 0; padding: .6em 1em; border-left: 3px solid #aebcd2; background: var(--green-light, #edf1f7); color: var(--muted, #677386); }
+.heartball-markdown blockquote p { color: var(--muted, #677386); }
+.heartball-markdown blockquote > :last-child { margin-bottom: 0; }
+.heartball-markdown a { color: var(--green, #284a74); text-decoration: underline; text-underline-offset: 3px; }
+.heartball-markdown a:focus-visible { outline: 2px solid var(--green, #284a74); outline-offset: 3px; }
+.heartball-markdown code { font-family: ui-monospace, Consolas, monospace; font-size: .9em; padding: .12em .3em; border-radius: 4px; background: var(--green-light, #edf1f7); color: var(--text, #29364b); }
+.heartball-markdown pre { max-width: 100%; overflow-x: auto; margin: 1em 0; padding: 1em; border-radius: 8px; background: var(--green-light, #edf1f7); white-space: pre; overflow-wrap: normal; }
+.heartball-markdown pre code { padding: 0; background: transparent; white-space: pre; }
+.heartball-markdown hr { border: 0; border-top: 1px solid var(--line, #dce1e9); margin: 1.4em 0; }
+.heartball-markdown-table { max-width: 100%; overflow-x: auto; margin: 1em 0; }
+.heartball-markdown table { width: 100%; border-collapse: collapse; font-size: 16px; }
+.heartball-markdown th, .heartball-markdown td { padding: .6em .8em; border: 1px solid var(--line, #dce1e9); text-align: left; vertical-align: top; min-width: 6em; }
+.heartball-markdown th { background: var(--green-light, #edf1f7); font-weight: 700; }
+@media (max-width: 600px) {
+  .heartball-markdown, .heartball-markdown p, .heartball-markdown ul, .heartball-markdown ol, .heartball-markdown table { font-size: 16px; }
+  .heartball-markdown h1 { font-size: 23px; }
+  .heartball-markdown h2 { font-size: 21px; }
+  .heartball-markdown blockquote { padding: .5em .75em; }
+}

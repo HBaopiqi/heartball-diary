@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f6f4ee">
+  <title>心力日记 · 让日子有迹可循</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="markdown.css">
+  <link rel="stylesheet" href="readability.css">
+  <link rel="stylesheet" href="profile.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">跳到内容</a>
+  <div class="app-shell">
+    <aside class="sidebar" aria-label="主要导航">
+      <a class="brand" href="#daily" aria-label="心力日记首页"><span class="brand-symbol" aria-hidden="true"><i></i><i></i><i></i></span><span>心力日记<small>留住日常的纹理</small></span></a>
+      <div class="sidebar-caption">我的记录</div>
+      <nav class="nav" id="main-nav">
+        <button data-view="daily" class="nav-item active"><span data-icon="book"></span>每日回顾<span class="nav-arrow">↗</span></button>
+        <button data-view="favorites" class="nav-item"><span data-icon="bookmark"></span>我的收藏<span class="nav-count" id="favorite-count">0</span></button>
+        <button data-view="calendar" class="nav-item"><span data-icon="calendar"></span>日历</button>
+        <button data-view="progress" class="nav-item"><span data-icon="progress"></span>进展</button>
+        <button data-view="archive" class="nav-item"><span data-icon="layers"></span>全部记录<span class="nav-count" id="archive-count"></span></button>
+      </nav>
+      <div class="sidebar-bottom">
+        <div class="storage-mark"><span class="status-dot"></span>本地资料库</div>
+        <p id="sidebar-stats">正在载入记录</p>
+        <div class="sidebar-rule"></div>
+        <p class="sidebar-note"><span>平凡的一天，</span><span>也有值得记住的瞬间。</span></p>
+        <button class="sync-info" id="sync-info"><span data-icon="info"></span><span>查看同步信息</span></button>
+      </div>
+    </aside>
+    <div class="main-shell">
+      <header class="topbar">
+        <div class="breadcrumb">我的日常<span>/</span><strong id="view-label">每日回顾</strong></div>
+        <form id="search-form" class="global-search" role="search"><span data-icon="search"></span><input id="global-query" type="search" placeholder="搜索记录与原文" aria-label="搜索全部记录"><button type="submit" class="search-submit" aria-label="搜索">搜索</button></form>
+        <button id="profile-button" class="profile-button" type="button" aria-haspopup="dialog" aria-label="管理档案"><span class="profile-button-symbol" aria-hidden="true">我</span><span class="profile-button-copy"><small>档案</small><span id="profile-button-label">我的记录</span></span><span aria-hidden="true">⌄</span></button>
+      </header>
+      <main id="main" tabindex="-1"><div id="page-content"></div></main>
+      <footer class="footer"><span>心力日记 <span class="footer-dot">·</span> 从记录，看见生活</span><span id="footer-sync"></span></footer>
+    </div>
+  </div>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <dialog id="detail-dialog" class="detail-dialog" aria-labelledby="detail-title">
+    <div class="dialog-top"><span class="eyebrow" id="detail-eyebrow">记录详情</span><button class="icon-button" id="close-dialog" aria-label="关闭详情"><span data-icon="close"></span></button></div>
+    <h2 id="detail-title"></h2><div id="detail-meta" class="detail-meta"></div>
+    <div class="dialog-actions"><button id="go-to-day" class="button button-primary"><span data-icon="calendar"></span>回到这一天</button><button id="favorite-record" class="button button-quiet"><span data-icon="bookmark"></span><span>收藏</span></button><button id="copy-record" class="button button-quiet"><span data-icon="copy"></span>复制</button></div>
+    <div class="detail-tabs" id="detail-tabs"><button data-tab="clean" class="active">内容整理</button><button data-tab="raw">转写原文</button></div>
+    <div id="detail-body" class="detail-body"></div>
+    <div id="detail-sources" class="detail-sources"></div>
+  </dialog>
+  <script src="data.js"></script>
+  <script src="markdown.js"></script>
+  <script src="profiles.js"></script>
+  <script src="sync-info.js"></script>
+  <script src="report.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

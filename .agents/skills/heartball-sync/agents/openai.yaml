@@ -1,0 +1,6 @@
+interface:
+  display_name: "心力球每日整理"
+  short_description: "根据完整原始话语整理每天的活动、交流、进展和安排，并更新本地心力日记"
+  default_prompt: "使用 $heartball-sync 从我的心力球原文独立整理每日回顾，并更新对应的本地日记资料库。"
+policy:
+  allow_implicit_invocation: true

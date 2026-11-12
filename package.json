@@ -1,0 +1,17 @@
+{
+  "name": "heartball-diary",
+  "version": "0.1.0",
+  "description": "Local-first diary for Heartball MCP records, daily reviews and PDF reports",
+  "private": true,
+  "type": "module",
+  "license": "MIT",
+  "engines": { "node": ">=22" },
+  "scripts": {
+    "start": "node server/index.mjs",
+    "test": "node --test tests/*.test.mjs",
+    "demo": "node scripts/create-demo.mjs"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "1.32.2"
+  }
+}

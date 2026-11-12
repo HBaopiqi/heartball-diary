@@ -18,3 +18,9 @@ credentials.json
 work/
 exports/
 backups/
+.claude/skills/heartball-setup/
+.claude/skills/heartball-sync/
+.trae/skills/heartball-setup/
+.trae/skills/heartball-sync/
+.qoder/skills/heartball-setup/
+.qoder/skills/heartball-sync/

@@ -1,0 +1,6 @@
+interface:
+  display_name: "心力日记首次配置"
+  short_description: "检查本机环境、安装并启动心力日记，配置项目技能并引导心力球账号连接"
+  default_prompt: "使用 $heartball-setup 帮我在本机配置心力日记，完成启动检查并引导我接入自己的心力球。"
+policy:
+  allow_implicit_invocation: true

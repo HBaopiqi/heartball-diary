@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="markdown.css">
   <link rel="stylesheet" href="readability.css">
   <link rel="stylesheet" href="profile.css">
+  <link rel="stylesheet" href="author.css">
 </head>
 <body>
   <a class="skip-link" href="#main">跳到内容</a>
@@ -38,7 +39,16 @@
         <button id="profile-button" class="profile-button" type="button" aria-haspopup="dialog" aria-label="管理档案"><span class="profile-button-symbol" aria-hidden="true">我</span><span class="profile-button-copy"><small>档案</small><span id="profile-button-label">我的记录</span></span><span aria-hidden="true">⌄</span></button>
       </header>
       <main id="main" tabindex="-1"><div id="page-content"></div></main>
-      <footer class="footer"><span>心力日记 <span class="footer-dot">·</span> 从记录，看见生活</span><span id="footer-sync"></span></footer>
+      <footer class="footer">
+        <div class="footer-meta"><span>心力日记 <span class="footer-dot">·</span> 从记录，看见生活</span><span id="footer-sync"></span></div>
+        <div class="footer-author">
+          <span class="author-signature">由 <strong>鹤我这豹脾气</strong> 设计与开发</span>
+          <nav class="author-links" aria-label="作者与联系">
+            <a href="https://github.com/HBaopiqi" target="_blank" rel="noopener noreferrer">GitHub 主页 <span aria-hidden="true">↗</span></a>
+            <a href="mailto:hbaopiqi@gmail.com"><span class="author-contact-label">联系我</span> hbaopiqi@gmail.com</a>
+          </nav>
+        </div>
+      </footer>
     </div>
   </div>
   <div id="toast" class="toast" role="status" aria-live="polite"></div>
